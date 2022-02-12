@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mata Mosquito</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+
+	<script>
+		function iniciarJogo(){
+			var nivel = document.getElementById('nivel').value
+			if(nivel===''){
+				alert('Selecione um nível para iniciar')
+				return false
+			}
+			window.location.href = "app.html?" + nivel
+		}
+	</script>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row"> <!--/Ajuste de imagem game over-->
+			<div class="col">
+				<div class="d-flex justify-content-center">
+				<img src="imagens/game.png">
+				</div>
+			</div>
+		</div><!--/Fim do ajuste de imagem-->
+
+		<div class="row"><!--/Botão para iniciar-->
+			<div class="col">
+				<div class="d-flex justify-content-center">
+				<button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()">Iniciar Jogo</button>
+				</div>
+			</div>
+		</div><!--/fim botão iniciar-->
+
+		<div class="row"><!--/inicio botão dificuldade-->
+			<div class="col">
+				<div class="d-flex justify-content-center">
+					<div class="mb-2">
+						<select class="form-control" id="nivel">
+							<option value="">Selecione a Dificuldade</option>
+							<option value="normal">Normal</option>
+							<option value="dificil">Difícil</option>
+							<option value="chucknorris">Chuck Norris</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div><!--/Fim do botão dificuldade-->
+	</div>
+
+
+
+
+
+</body>
+</html>
